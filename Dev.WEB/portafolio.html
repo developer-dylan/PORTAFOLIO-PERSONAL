@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Corrected meta description -->
+  <meta name="description" content="Portafolio de Dylan Marin como un Desarrollador de Riwi.">
+
+  <title>Portafolio - Dylan Marin</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon with support for different resolutions -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <header class="header">
+    <a class="logo" href="portafolio.html">
+      <!-- Image with srcset for responsive loading -->
+      <img src="images/logo.png" srcset="images/logo-480.png 480w, images/logo-768.png 768w, images/logo.png 1024w"
+        alt="Logo" class="logo">
+    </a>
+    <h1 class="title">Dylan Marin - Software Developer</h1>
+  </header>
+
+  <nav class="nav">
+    <ul>
+      <li onclick="toggleSection('who')"><a href="#quien-soy">Quién Soy</a></li>
+      <li onclick="toggleSection('what')"><a href="#que-hago">Qué hago</a></li>
+      <li onclick="toggleSection('habilities')"><a href="#habilidades">Habilidades</a></li>
+      <li onclick="toggleSection('projects')"><a href="#project">Proyectos</a></li>
+      <li>
+        <a href="https://github.com/developer-dylan/Dylan.Dev/commits?author=developer-dylan" target="_blank"
+          class="github-btn">
+          <!-- Button linking to GitHub profile opening in new tab -->
+          <img src="images/github.png" alt="GitHub" class="github-icon">
+          <!-- GitHub icon -->
+          GitHub
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="main">
+    <div class="content">
+      <article class="article">
+        <h2>Acerca de Mí</h2>
+        <br>
+
+        <!-- Section 1 with corrected id -->
+        <section class="info-section" id="section1" onclick="toggleSection('who')">
+          <h3 class="accordion-title">
+            ¿Quién Soy? <span class="arrow" id="quien-soy">▼</span>
+          </h3>
+          <p class="info-content" id="content-who">
+            👨‍💻 ¡Hey! Soy Dylan Marín, Coder de Riwi, técnico en sistemas y futuro desarrollador full stack.
+            En Riwi estoy formando una base sólida en programación web y desarrollo de software, aprendiendo a moverme
+            tanto en el frontend como en el backend.
+            He trabajado con tecnologías como HTML, CSS, PHP y Python, y no le tengo miedo a meterle mano a lo que se
+            venga: diseño, lógica, bases de datos, APIs, frameworks...lo que sea.
+            Me apasiona crear soluciones completas, funcionales y con buena pinta.
+          </p>
+        </section>
+
+        <!-- Section 2 with corrected id -->
+        <section class="info-section" id="section2" onclick="toggleSection('what')">
+          <h3 class="accordion-title">
+            ¿Qué hago? <span class="arrow" id="habilidades">▼</span>
+          </h3>
+          <p class="info-content" id="content-what">
+            💻 Desarrollo interfaces intuitivas usando HTML y CSS, programo la funcionalidad con PHP y Python, y conecto
+            todo con bases de datos y APIs.
+            Me ocupo de resolver problemas técnicos, optimizar el rendimiento y asegurar que cada proyecto sea escalable
+            y fácil de mantener.
+            ✨ En resumen, hago que la tecnología trabaje para las personas, creando soluciones completas y con impacto.
+          </p>
+        </section>
+
+        <!-- Section 3 with corrected id -->
+        <section class="info-section" id="section3" onclick="toggleSection('habilities')">
+          <h3 class="accordion-title">
+            Habilidades <span class="arrow" id="arrow-habilities">▼</span>
+          </h3>
+          <ul class="info-content" id="content-habilities">
+            <li>HTML, CSS y PHP</li>
+            <li>Programación en Python</li>
+            <li>Manejo de bases de datos (MySQL)</li>
+            <li>Trabajo en equipo</li>
+            <li>Comunicación efectiva</li>
+            <li>Ganas de aprender siempre</li>
+            <!-- ... -->
+          </ul>
+        </section>
+      </article>
+
+      <aside class="aside">
+        <!-- Profile image with srcset for responsive loading -->
+        <img src="images/unnamed.jpg"
+          srcset="images/unnamed-480.jpg 480w, images/unnamed-768.jpg 768w, images/unnamed.jpg 1024w"
+          alt="Foto de Dylan" class="profile-img">
+      </aside>
+    </div>
+
+    <!-- Projects table -->
+    <div class="projects" id="project">
+      <h1>Proyectos</h1>
+      <br>
+      <table class="info-table" id="content-table">
+        <!-- Table listing projects -->
+        <tr>
+          <th>Proyecto</th>
+          <th>Lenguaje</th>
+          <th>Link</th>
+        </tr>
+        <!-- Project rows with GitHub links -->
+        <tr>
+          <td>Sistema de Facturación</td>
+          <td rowspan="3">Python</td>
+          <td><a href="https://github.com/developer-dylan/Dylan.Dev/commit/0002ad110e3f473e8a68f175de8086fbf24a4450" target="_blank">Ver</a></td>
+        </tr>
+        <tr>
+          <td>Sistema de Gestión de Calificaciones</td>
+          <td><a href="https://github.com/developer-dylan/Dylan.Dev/commit/52866c765d6a8f7e4653093e1b68d90d8afc7891" target="_blank">Ver</a></td>
+        </tr>
+        <tr>
+          <td>Gestión de Inventario</td>
+          <td><a href="https://github.com/developer-dylan/Dylan.Dev/commit/44de38d123c4805c60df75a2c3d50d08988cf7aa" target="_blank">Ver</a></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  <br>
+
+  <div class="image-projects">
+    <h2>Sistema de Facturación</h2>
+    <br><br><br>
+    <aside class="aside">
+      <!-- Project image with srcset for responsive loading -->
+      <img src="images/imageproject.png"
+        srcset="images/imageproject-480.png 480w, images/imageproject-768.png 768w, images/imageproject.png 1024w"
+        alt="Imagen del Proyecto de Sistema de Facturación" class="img-projects">
+    </aside>
+    <br><br>
+  </div>
+
+  <footer class="footer">
+    <br>
+    <a href="formulario.html" target="_blank">Contáctame</a>
+    <br><br>
+    <p class="copy">© 2025 Dylan Marín. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Toggle visibility of content sections and rotate arrows
+    function toggleSection(id) {
+      const content = document.getElementById('content-' + id);
+      const arrow = document.getElementById('arrow-' + id);
+      content.classList.toggle('active');
+      arrow.classList.toggle('rotate');
+    }
+  </script>
+</body>
+
+</html>

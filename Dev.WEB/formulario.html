@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="es">
+<!-- Starts the HTML document with Spanish language -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Sets character encoding to UTF-8 to support special characters -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configures the viewport for responsive design on mobile devices -->
+
+  <title>Formulario de Contacto</title>
+  <!-- Title shown in the browser tab -->
+
+  <link rel="stylesheet" href="css/formulario.css">
+  <!-- Link to external stylesheet located in the css folder -->
+
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <!-- Browser tab icon (favicon) -->
+</head>
+
+<body>
+  <!-- Main body of the document -->
+
+  <div class="form-container">
+    <!-- Main container for the form -->
+
+    <h2>Contáctame</h2>
+    <!-- Form title -->
+
+    <form action="#" method="post">
+      <!-- Form element with POST method and empty action (#) -->
+
+      <label for="nombre">Nombre:</label>
+      <!-- Label for the name input field -->
+
+      <input type="text" id="nombre" name="nombre" required>
+      <!-- Text input for the name, required -->
+
+      <label for="email">Correo electrónico:</label>
+      <!-- Label for the email input field -->
+
+      <input type="email" id="email" name="email" required>
+      <!-- Input for entering a valid email, required -->
+
+      <label for="mensaje">Mensaje:</label>
+      <!-- Label for the message input -->
+
+      <input type="text" id="mensaje" name="mensaje">
+      <!-- Text input for the message -->
+
+      <button type="submit">Enviar</button>
+      <!-- Button to submit the form -->
+    </form>
+
+    <footer class="footer">
+      <!-- Footer section below the form -->
+
+      <p class="copy">© 2025 Dylan Marín. Todos los derechos reservados.</p>
+      <!-- Copyright text -->
+    </footer>
+  </div>
+</body>
+
+</html>

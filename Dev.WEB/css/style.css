@@ -1,0 +1,400 @@
+:root {
+  /* Define primary color for the theme */
+  --primary-color: #F25CAF;
+  /* Define font stack for consistent typography */
+  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Background overlay color with transparency */
+  --background-overlay: rgba(0, 0, 0, 0.5);
+  /* Background color for header sections */
+  --header-bg-color: #2b0a5a;
+  /* Background color for table headers */
+  --table-header-bg: #2b0a5a;
+  /* Light text color for dark backgrounds */
+  --text-color-light: #eee;
+  /* Dark text color for light backgrounds */
+  --text-color-dark: #000;
+}
+
+/* === Base styles === */
+* {
+  /* Remove default margin and padding */
+  margin: 0;
+  padding: 0;
+  /* Use border-box model for sizing */
+  box-sizing: border-box;
+  /* Apply global font stack */
+  font-family: var(--font-stack);
+}
+
+body {
+  /* Set background image with proper sizing and positioning */
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/536/581/non_2x/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones-vector.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Set default text color */
+  color: var(--text-color-light);
+  /* Base font size */
+  font-size: 1rem;
+  /* Line height for readability */
+  line-height: 1.6;
+  /* Position relative for layering */
+  position: relative;
+}
+
+body::before {
+  /* Create overlay layer on body background */
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* Use semi-transparent overlay */
+  background-color: var(--background-overlay);
+  /* Place behind content */
+  z-index: -1;
+}
+
+/* Header container styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Logo size and prevent shrinking */
+.logo {
+  width: 145px;
+  height: 145px;
+  flex-shrink: 0;
+}
+
+/* Title takes available space, centered and styled */
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--text-color-light);
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.9rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  /* Remove bullet points */
+  list-style: none;
+  /* Background image for nav */
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/536/581/non_2x/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones-vector.jpg');
+}
+
+/* Hover effect on GitHub button */
+.github-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* GitHub icon size and padding */
+.github-icon {
+  width: 20px;
+  height: 20px;
+  padding-top: 0.3rem;
+}
+
+/* Navigation list items inline and padded */
+.nav li {
+  display: inline-block;
+  padding: 20px;
+}
+
+/* Anchor link styles */
+a {
+  color: var(--text-color-light);
+  padding: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Focus outline for accessibility */
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Hover effect for nav links */
+nav li a:hover {
+  background-color: var(--primary-color);
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+/* Main content layout */
+.main .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+/* Article container with padding, rounded corners and shadow */
+.article {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Article headings styling */
+.article h2 {
+  border-radius: 8px;
+  color: var(--text-color-light);
+}
+
+/* Accordion section styling */
+.info-section {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Accordion header styles */
+.accordion-title {
+  background-color: var(--header-bg-color);
+  color: var(--text-color-light);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+/* Arrow icon transition for rotation */
+.arrow {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+/* Rotate arrow when active */
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* List items inside content */
+#content-habilities li {
+  display: list-item;
+  padding: 0.5rem 0;
+}
+
+/* Accordion content hidden by default with transition */
+.info-content {
+  max-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: white;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: var(--text-color-dark);
+}
+
+/* List items inside accordion content */
+.info-content li {
+  color: var(--text-color-dark);
+}
+
+/* Show accordion content when active */
+.info-content.active {
+  max-height: 1000px;
+  padding: 1rem;
+}
+
+/* Aside container for image centering */
+.aside {
+  display: flex;
+  justify-content: center;
+}
+
+/* Profile image styling with transition and hover effect */
+.profile-img {
+  max-width: 150%;
+  width: 220px;
+  border-radius: 12px;
+  margin: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects table container with horizontal scrolling */
+.projects {
+  overflow-x: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Projects table styling */
+.projects table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  color: var(--text-color-light);
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/536/581/non_2x/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones-vector.jpg');
+}
+
+/* Table header and data cell styling */
+.projects th,
+.projects td {
+  padding: 0.75rem;
+  border: 1.2px solid #ddd;
+  text-align: center;
+}
+
+/* Table header background and text color */
+.projects th {
+  background-color: var(--table-header-bg);
+  color: var(--text-color-light);
+}
+
+/* Links inside table cells */
+.projects td a {
+  color: var(--text-color-light);
+}
+
+/* Footer styling with background image */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/536/581/non_2x/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones-vector.jpg');
+}
+
+/* Footer list items inline with no bullet */
+.footer li {
+  list-style: none;
+  display: inline;
+}
+
+/* Footer links styling */
+.footer li a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  padding: 12px;
+  background-color: var(--primary-color);
+}
+
+/* Footer link hover effect */
+.footer a:hover {
+  background-color: var(--primary-color);
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+/* Copyright text styling */
+.copy {
+  font-size: 0.875rem;
+  color: var(--text-color-light);
+}
+
+/* === Responsive styles === */
+@media (min-width: 768px) {
+  /* Change nav layout to row on medium screens */
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* Increase logo size */
+  .logo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* Header layout adjustments on larger screens */
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Larger logo size */
+  .logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Main content grid layout */
+  .main .content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Projects table width */
+  .projects table {
+    width: 80%;
+  }
+
+  /* Profile image larger size */
+  .profile-img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Projects table smaller width for wide screens */
+  .projects table {
+    width: 70%;
+  }
+
+  /* Profile image slightly bigger */
+  .profile-img {
+    width: 320px;
+  }
+
+  /* Largest logo size */
+  .logo {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+/* Center h2 elements with flex */
+h2 {
+  justify-content: center;
+  display: flex;
+}
+
+/* Project images styling with hover effect */
+.img-projects {
+  max-width: 150%;
+  width: 50%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+/* Color for project section headings */
+.image-projects h2 {
+  color: var(--text-color-light);
+}
+
+/* Hover scale and shadow for project images */
+.img-projects:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

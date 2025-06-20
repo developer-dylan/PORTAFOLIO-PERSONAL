@@ -1,0 +1,86 @@
+/* === Reset y estilos globales === */
+* {
+  margin: 0;                     /* Elimina el margen predeterminado */
+  padding: 0;                    /* Elimina el padding predeterminado */
+  box-sizing: border-box;       /* Hace que el padding y border no afecten el tamaño total */
+  font-family: sans-serif;      /* Establece una fuente sans-serif como predeterminada */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Fuente principal del cuerpo */
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/536/581/non_2x/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones-vector.jpg'); /* Fondo de la pagina*/
+  padding: 2rem;                  /* Espaciado interior del body */
+  display: flex;                  /* Usa Flexbox para centrar el contenido */
+  justify-content: center;       /* Centra horizontalmente */
+  align-items: center;           /* Centra verticalmente */
+  min-height: 50vh;              /* Altura mínima del 50% del alto de la ventana */
+}
+
+/* === Contenedor del formulario === */
+.form-container {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/002/536/581/non_2x/dark-blue-smart-blurred-pattern-elegant-bright-illustration-with-gradient-background-for-cell-phones-vector.jpg'); /* Fondo del formulario*/
+  padding: 2rem;                       /* Espaciado interior */
+  border-radius: 8px;                  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del contenedor */
+  width: 100%;                         /* Ocupa todo el ancho disponible */
+  max-width: 400px;                    /* Máximo ancho para mantenerlo compacto */
+  margin: 3rem;
+}
+
+/* === Título del formulario === */
+h2 {
+  text-align: center;                 /* Centra el texto horizontalmente */
+  margin-bottom: 1rem;             /* Espacio debajo del título */
+  color: white;
+}
+
+/* === Estructura del formulario === */
+form {
+  display: flex;                     /* Flexbox para alinear los elementos en columna */
+  flex-direction: column;           /* Dirección vertical */
+  color: white;
+}
+
+/* === Etiquetas de los campos === */
+label {
+  margin-top: 1rem;                 /* Espacio arriba de cada etiqueta */
+  margin-bottom: 0.25rem;          /* Espacio entre la etiqueta y el input */
+}
+
+/* === Campos de entrada === */
+input {
+  padding: 0.5rem;                  /* Espaciado interno */
+  border: 1px solid #ccc;          /* Borde gris claro */
+  border-radius: 4px;              /* Bordes suavemente redondeados */
+}
+
+/* === Botón de enviar === */
+button {
+  margin-top: 1.5rem;              /* Espacio sobre el botón */
+  padding: 0.75rem;                /* Espaciado interno del botón */
+  background-color: #F25CAF;       /* Color de fondo del botón */
+  filter: drop-shadow(0 0 10px #F25CAF ); 
+  color: white;                    /* Texto blanco */
+  border: none;                    /* Sin borde */
+  border-radius: 4px;              /* Bordes redondeados */
+  cursor: pointer;                 /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* === Pie de página === */
+.footer {
+  text-align: center;             /* Centra el texto del pie de página */
+  margin-top: 2rem;               /* Espacio arriba del footer */
+  padding: 1rem;                  /* Espaciado interior */
+  border-top: 1px solid #ccc;     /* Línea superior separadora */
+}
+
+/* === Efecto hover para enlaces en el footer === */
+.footer a:hover {
+  background-color: #000000;     /* Cambia el fondo a negro al pasar el mouse */
+}
+
+/* === Texto de derechos de autor === */
+.copy {
+  font-size: 0.875rem;           /* Tamaño de fuente más pequeño */
+  color: white;                   /* Color de texto gris medio */
+}
